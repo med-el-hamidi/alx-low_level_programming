@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+/**
+ * main - Prints the alphabet in lowercase.
+ *
+ * Return: Always 0 (EXIT_SUCCESS)
+ */
+int main(void)
+{
+	for (int i = 97; i < 123; i++)
+	{
+		putchar("%c", i);
+	}
+	putchar('\n');
+	return (0);
+}
