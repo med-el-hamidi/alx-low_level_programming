@@ -5,12 +5,11 @@
  *
  * Return: Always 0 (EXIT_SUCCESS)
  */
-int main(void)
-{
-	for (int i = 97; i < 123; i++)
-	{
-		putchar("%c", i);
-	}
-	putchar('\n');
-	return (0);
+int main() {
+    int i;
+    for (i = 97; i <= 122; i++) {
+        putchar(i);
+    }
+    putchar('\n');
+    return 0;
 }
