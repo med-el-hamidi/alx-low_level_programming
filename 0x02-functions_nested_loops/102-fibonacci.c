@@ -6,12 +6,13 @@
  *
  * Return: Always 0 EXIT_SUCCESS().
  */
+
 int main(void)
 {
-	int i;
+	int count;
 	unsigned long fib1 = 0, fib2 = 1, sum;
 
-	for (i = 0; i < 50; i++)
+	for (count = 0; count < 50; count++)
 	{
 		sum = fib1 + fib2;
 		printf("%lu", sum);
@@ -19,11 +20,11 @@ int main(void)
 		fib1 = fib2;
 		fib2 = sum;
 
-		if (i == 49)
-			break;
-		printf(", ");
+		if (count == 49)
+			printf("\n");
+		else
+			printf(", ");
 	}
-	printf("\n");
 
 	return (0);
 }
