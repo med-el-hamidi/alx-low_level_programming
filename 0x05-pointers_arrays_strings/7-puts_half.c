@@ -17,7 +17,7 @@ void puts_half(char *str)
 		s++;
 	}
 
-	len_half = (len % 2 == 0) ? len / 2 : (len - 1) / 2;
+	len_half = (len % 2 == 0) ? len / 2 : (len + 1) / 2;
 
 	for (i = len_half ; *(str + i) != '\0' ; i++)
 		_putchar(*(str + i));
