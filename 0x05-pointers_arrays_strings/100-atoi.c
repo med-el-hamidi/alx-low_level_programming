@@ -1,50 +1,48 @@
 #include "main.h"
 
 /**
- * _atoi - converts a string to an integer
+ * _atoi - converts a string to an integer.
  * @s: string to be converted
  *
- * Return: the int converted from the string
+ * Return: the int converted from the string.
  */
 
 int _atoi(char *s)
 {
-	int sign = 1;
-	int result = 0;
+	int i, sign, n, len, res, digit;
 
-	while (*s == ' ')
-		s++;
+	i = 0;
+	sign = 0;
+	n = 0;
+	len = 0;
+	res = 0;
+	digit = 0;
 
-	if (*s == '-')
+	while (*(s + len) != '\0')
+		len++;
+
+	while (i < len && res == 0)
 	{
-		sign = -1;
-		s++;
-	}
-	else if (*s == '+')
-		s++;
+		if (*(s + i) == '-')
+			++sign;
 
-	/* Convert digits to integer*/
-	while (*s >= '0' && *s <= '9')
-	{
-		int digit = *s - '0';
-
-		/*Check for overflow*/
-		if (result > INT_MAX / 10 ||
-				(result == INT_MAX / 10 && digit > INT_MAX % 10))
+		if (*(s + i)  >= '0' && *(s + i) <= '9')
 		{
-			if (sign == 1)
-			{
-				return (INT_MAX);
-			}
-			else
-			{
-				return (INT_MIN);
-			}
-		}
+			digit = *(s + i) - '0';
+			if (sign % 2)
+				digit = -digit;
 
-		result = result * 10 + digit;
-		s++;
+			n = n * 10 + digit;
+			f = 1;
+			if (*(s + (i + 1)) < '0' || *(s + (i + 1)) > '9')
+				break;
+			res = 0;
+		}
+		i++;
 	}
 
-	return (sign * result);
+	if (res == 0)
+		return (0);
+
+	return (n);
 }
