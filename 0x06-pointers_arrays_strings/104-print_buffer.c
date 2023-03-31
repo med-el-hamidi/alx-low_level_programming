@@ -4,13 +4,12 @@
 /**
  * print_buffer - prints buffer
  * @b: buffer
- * @size: size
- * Return: void
+ * @size: input size
  */
 
 void print_buffer(char *b, int size)
 {
-	int k, j, i;
+	int i, j, k;
 
 	k = 0;
 
@@ -21,8 +20,8 @@ void print_buffer(char *b, int size)
 	}
 	while (k < size)
 	{
-		j = size - k < 10 ? size - o : 10;
-		printf("%08x: ", o);
+		j = size - k < 10 ? size - k : 10;
+		printf("%08x: ", k);
 		for (i = 0; i < 10; i++)
 		{
 			if (i < j)
@@ -48,3 +47,4 @@ void print_buffer(char *b, int size)
 		k += 10;
 	}
 }
+
