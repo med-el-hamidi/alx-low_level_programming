@@ -20,6 +20,5 @@ void print_diagsums(int *a, int size)
 		/* sum of diagonal from top-right to bottom-left */
 		sum2 += *(a + i * size + size - 1 - i);
 	}
-	printf("Sum of diagonal from top-left to bottom-right: %d\n", sum1);
-	printf("Sum of diagonal from top-right to bottom-left: %d\n", sum2);
+	printf("%d, %d\n", sum1, sum2);
 }
