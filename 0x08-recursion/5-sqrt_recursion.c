@@ -1,4 +1,4 @@
-#include "main.h";
+#include "main.h"
 
 int _sqrt_helper_recursion(int n, int i);
 
@@ -11,7 +11,7 @@ int _sqrt_helper_recursion(int n, int i);
  * Return: If the square root is found, return it, otherwise return -1.
  */
 int _sqrt_helper_recursion(int n, int i)
-
+{
 	if (i * i == n)
 		return (i);
 	else if (i * i > n)
