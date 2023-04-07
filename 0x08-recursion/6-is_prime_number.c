@@ -1,4 +1,5 @@
-#include "main.h";
+#include "main.h"
+
 int is_prime_num_helper(int n, int i);
 
 /**
