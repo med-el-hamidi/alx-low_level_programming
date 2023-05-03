@@ -61,6 +61,9 @@ int multiply(char *num1, char *num2)
 	result = malloc(len_res * sizeof(int));
 	if (result == NULL)
 		_error();
+	
+	for (i = 0; i < len_res; i++)
+		result[i] = 0;
 
 	for (i = len1 - 1; i >= 0; i--)
 	{
