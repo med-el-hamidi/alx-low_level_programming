@@ -14,6 +14,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 void _error(void);
 int _strlen(char *str);
 int is_digits(char *number);
-int multiply(char *num1, char *num2):
+int multiply(char *num1, char *num2);
 
 #endif
