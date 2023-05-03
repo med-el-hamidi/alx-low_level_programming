@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 
 /**
  * _error - Prints an error message and exits with status 98.
