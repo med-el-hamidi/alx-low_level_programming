@@ -13,7 +13,6 @@ void *malloc_checked(unsigned int b)
 
 	if (ptr == NULL)
 	{
-		printf("malloc failed. Exiting with status 98.\n");
 		exit(98);
 	}
 
