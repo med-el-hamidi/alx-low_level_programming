@@ -56,7 +56,7 @@ int multiply(char *num1, char *num2)
 
 	len1 = _strlen(num1);
 	len2 = _strlen(num2);
-	len_res = len1 + len2;
+	len_res = len1 + len2 + 1;
 
 	result = malloc(len_res * sizeof(int));
 	if (result == NULL)
