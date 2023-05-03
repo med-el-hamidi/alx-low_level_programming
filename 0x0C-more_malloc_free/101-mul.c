@@ -56,7 +56,7 @@ int multiply(char *num1, char *num2)
 
 	len1 = _strlen(num1);
 	len2 = _strlen(num2);
-	len_res = len1 + len2 + 1;
+	len_res = len1 + len2;
 
 	result = malloc(len_res * sizeof(int));
 	if (result == NULL)
@@ -95,7 +95,7 @@ int main(int argc, char *argv[])
 	if (argc != 3)
 		_error();
 
-	if (!is_digits(argv[1]) || !is_digits(argv[2]))
+	if (argc != 3 || !is_digits(argv[1]) || !is_digits(argv[2]))
 		_error();
 
 	multiply(argv[1], argv[2]);
