@@ -22,7 +22,7 @@ int _atoi(char *s)
 		len++;
 
 	while (i < len && res == 0)
- 	{
+	{
 		if (*(s + i) == '-')
 			++sign;
 
@@ -39,7 +39,7 @@ int _atoi(char *s)
 			res = 0;
 		}
 		i++;
-        }
+	}
 
 	if (res == 0)
 		return (0);
